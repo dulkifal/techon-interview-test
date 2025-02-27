@@ -1,8 +1,4 @@
-.bus-details h2 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-  }
+
   
   .bus-card {
     background: white;
@@ -24,15 +20,4 @@
     text-align: center;
     margin: 2rem;
     color: #666;
-  }
-   /* Animation */
-   @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }

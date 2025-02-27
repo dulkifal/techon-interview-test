@@ -25,8 +25,8 @@ function BusDetails() {
 
   return (
     <div className="container">
-      <div className="box bus-details">
-        <h2>Bus Details</h2>
+      <div className="box">
+        <h2 className="title">Bus Details</h2>
         <div className="bus-card">
           <p>
             <strong>Name:</strong> {bus.busName}

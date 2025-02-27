@@ -40,8 +40,8 @@ function Login() {
   return (
     <div className="container">
       <div className="box">
-        <h2 className="login-title">Welcome Back</h2>
-        <p className="login-subtitle">Login to manage your buses</p>
+        <h2 className="title">Welcome Back</h2>
+        <p className="subtitle">Login to manage your buses</p>
         <form onSubmit={handleSubmit} className="login-form">
           <div className="input-group">
             <label htmlFor="emailOrPhone">Email or Phone</label>

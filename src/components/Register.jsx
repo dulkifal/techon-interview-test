@@ -38,8 +38,8 @@ function Register() {
   return (
     <div className="container">
       <div className="box">
-        <h2 className="register-title">Create Account</h2>
-        <p className="register-subtitle">Register to start managing your buses</p>
+        <h2 className="title">Create Account</h2>
+        <p className="subtitle">Register to start managing your buses</p>
         <form onSubmit={handleSubmit} className="register-form">
           <div className="input-group">
             <label htmlFor="emailOrPhone">Email or Phone</label>

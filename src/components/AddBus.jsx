@@ -43,8 +43,8 @@ function AddBus() {
   return (
     <div className="container">
       <div className="box">
-        <h2 className="form-title">Add New Bus</h2>
-        <p className="form-subtitle">Add a new bus to your fleet</p>
+        <h2 className="title">Add New Bus</h2>
+        <p className="subtitle">Add a new bus to your fleet</p>
         <form onSubmit={handleSubmit} className="form-form">
           <div className="input-group">
             <label htmlFor="busName">Bus Name</label>
