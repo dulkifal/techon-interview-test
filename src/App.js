@@ -6,7 +6,7 @@ import AddBus from './components/AddBus';
 import BusDetails from './components/BusDetails';
 import Navbar from './components/Navbar';
 import './App.css';
-import HomePage from './components/Homepage';
+import HomePage from './Homepage';
 
 function App() {
  

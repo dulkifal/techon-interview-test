@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import '../styles/BusDetails.css';
-import api from '../api/api';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import "../styles/BusDetails.css";
+import api from "../api/api";
 
 function BusDetails() {
   const { busId } = useParams();
@@ -10,14 +10,10 @@ function BusDetails() {
   useEffect(() => {
     const fetchBus = async () => {
       try {
-      
-        const response = await api.get(
-          `/get-bus/${busId}`,
-         
-        );
+        const response = await api.get(`/get-bus/${busId}`);
         setBus(response.data.bus);
       } catch (error) {
-        console.error('Get bus error:', error);
+        console.error("Get bus error:", error);
       }
     };
     fetchBus();
@@ -25,22 +21,36 @@ function BusDetails() {
 
   if (!bus) return <div className="loading">Loading...</div>;
 
-console.log(bus);
+  console.log(bus);
 
   return (
     <div className="container">
-    <div className="box bus-details">
-      <h2>Bus Details</h2>
-      <div className="bus-card">
-        <p><strong>Name:</strong> {bus.busName}</p>
-        <p><strong>Number:</strong> {bus.busNumber}</p>
-        <p><strong>Color:</strong> {bus.busColor}</p>
-        <p><strong>Type:</strong> {bus.busType}</p>
-        <p><strong>Owner:</strong> {bus.ownerName}</p>
-        <p><strong>Owner Phone:</strong> {bus.ownerMobile}</p>
-        <p><strong>Assistant Phone:</strong> {bus.assistendPhone}</p>
+      <div className="box bus-details">
+        <h2>Bus Details</h2>
+        <div className="bus-card">
+          <p>
+            <strong>Name:</strong> {bus.busName}
+          </p>
+          <p>
+            <strong>Number:</strong> {bus.busNumber}
+          </p>
+          <p>
+            <strong>Color:</strong> {bus.busColor}
+          </p>
+          <p>
+            <strong>Type:</strong> {bus.busType}
+          </p>
+          <p>
+            <strong>Owner:</strong> {bus.ownerName}
+          </p>
+          <p>
+            <strong>Owner Phone:</strong> {bus.ownerMobile}
+          </p>
+          <p>
+            <strong>Assistant Phone:</strong> {bus.assistendPhone}
+          </p>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
