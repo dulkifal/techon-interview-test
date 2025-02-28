@@ -40,7 +40,7 @@ function Register() {
       <div className="box">
         <h2 className="title">Create Account</h2>
         <p className="subtitle">Register to start managing your buses</p>
-        <form onSubmit={handleSubmit} className="register-form">
+        <form onSubmit={handleSubmit} className="form">
           <div className="input-group">
             <label htmlFor="emailOrPhone">Email or Phone</label>
             <input
@@ -64,7 +64,7 @@ function Register() {
             />
           </div>
           {error && <p className="error-message">{error}</p>}
-          <button type="submit" className="register-button" disabled={loading}>
+          <button type="submit" className="button" disabled={loading}>
             {loading ? 'Registering...' : 'Register'}
           </button>
         </form>

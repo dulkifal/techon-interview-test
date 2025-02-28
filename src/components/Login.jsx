@@ -42,7 +42,7 @@ function Login() {
       <div className="box">
         <h2 className="title">Welcome Back</h2>
         <p className="subtitle">Login to manage your buses</p>
-        <form onSubmit={handleSubmit} className="login-form">
+        <form onSubmit={handleSubmit} className="form">
           <div className="input-group">
             <label htmlFor="emailOrPhone">Email or Phone</label>
             <input
@@ -66,7 +66,7 @@ function Login() {
             />
           </div>
           {error && <p className="error-message">{error}</p>}
-          <button type="submit" className="login-button" disabled={loading}>
+          <button type="submit" className="button" disabled={loading}>
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>

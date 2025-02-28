@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../styles/Form.css";
 import api from "../api/api";
 import { useNavigate } from 'react-router-dom';
 
@@ -45,7 +44,7 @@ function AddBus() {
       <div className="box">
         <h2 className="title">Add New Bus</h2>
         <p className="subtitle">Add a new bus to your fleet</p>
-        <form onSubmit={handleSubmit} className="form-form">
+        <form onSubmit={handleSubmit} className="form">
           <div className="input-group">
             <label htmlFor="busName">Bus Name</label>
 
@@ -111,7 +110,7 @@ function AddBus() {
             />
           </div>
 
-          <button type="submit" className="form-button">
+          <button type="submit" className="button">
             Add Bus
           </button>
         </form>
