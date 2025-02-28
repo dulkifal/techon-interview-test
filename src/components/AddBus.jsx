@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import api from "../api/api";
 import { useNavigate } from 'react-router-dom';
 
-
 function AddBus() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -15,8 +14,18 @@ function AddBus() {
     assistentPhone: "",
   });
 
+  const validateForm = () => {
+    const { busName, busNumber, busColor, busType, ownerName, ownerPhone, assistentPhone } = formData;
+    if (!busName || !busNumber || !busColor || !busType || !ownerName || !ownerPhone || !assistentPhone) {
+      alert("All fields are required.");
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
     try {
       const response = await api.post("/add-bus", formData);
       console.log("Bus added:", response.data);
